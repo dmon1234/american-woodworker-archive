@@ -194,7 +194,7 @@
 
   if (!issue) {
     titleNode.textContent = "Issue not found";
-    document.querySelector(".reader-shell").innerHTML = '<p class="search-panel">The requested issue is not available in this proof of concept.</p>';
+    document.querySelector(".reader-shell").innerHTML = '<p class="search-panel">The requested issue is not available in this archive.</p>';
     return;
   }
 
