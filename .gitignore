@@ -1,0 +1,54 @@
+# Generated from a user's own DVD files. Do not commit.
+/assets/js/archive-data.js
+/assets/js/search-data.js
+
+# Original DVD source directories. Do not commit.
+/American Woodworker 1/
+/American Woodworker 2/
+/disc1/
+/disc2/
+/dvd/
+/dvd-content/
+/source/
+/sources/
+/issues/
+/images/
+/covers/
+
+# DVD-owned or generated magazine content.
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tif
+*.tiff
+*.ico
+*.gif
+*.webp
+*.pdf
+*.htm
+*.swf
+*.flv
+*.mp4
+*.m4v
+*.mov
+*.wmv
+*.avi
+*.mkv
+*.exe
+*.xml
+*.zip
+*.7z
+*.iso
+*.img
+*.dmg
+*.bin
+*.cue
+
+# Local/editor/runtime files.
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

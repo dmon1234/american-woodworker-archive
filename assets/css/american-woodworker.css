@@ -1,0 +1,490 @@
+:root {
+  color-scheme: light;
+  --ink: #26231f;
+  --muted: #6f6760;
+  --line: #d9d4cc;
+  --paper: #f8f6f1;
+  --panel: #ffffff;
+  --accent: #2f6f5e;
+  --accent-dark: #214e43;
+  --mark: #fff1a8;
+  --shadow: 0 10px 28px rgba(38, 35, 31, 0.12);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+button,
+.button {
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 14px;
+  font: inherit;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.button.secondary,
+button.secondary {
+  background: transparent;
+  color: var(--accent-dark);
+}
+
+.site-header,
+.reader-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px clamp(18px, 4vw, 48px);
+  border-bottom: 1px solid var(--line);
+  background: #fffcf7;
+}
+
+.site-header h1,
+.reader-header h1 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.reader-header h1 {
+  font-size: clamp(22px, 3vw, 34px);
+}
+
+.eyebrow,
+.subtitle,
+.section-heading p,
+.result-meta,
+.issue-meta,
+.page-picker,
+#page-caption {
+  color: var(--muted);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  font-size: 18px;
+}
+
+.top-actions,
+.reader-controls,
+.search-row,
+.page-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.archive-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
+  gap: 28px;
+  padding: 28px clamp(18px, 4vw, 48px) 48px;
+}
+
+.search-panel,
+.issue-browser,
+.reader-sidebar {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.search-panel {
+  align-self: start;
+  padding: 22px;
+  position: sticky;
+  top: 18px;
+}
+
+.issue-browser {
+  padding: 22px;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2,
+.reader-sidebar h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+.section-heading p {
+  margin: 0;
+}
+
+.search-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.search-row input {
+  flex: 1;
+  min-width: 0;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 12px;
+  font: inherit;
+}
+
+.results {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.result-item,
+.issue-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.result-item {
+  padding: 14px;
+}
+
+.result-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+  font-weight: 750;
+}
+
+.result-snippet {
+  margin: 8px 0 0;
+  color: #3e3934;
+  line-height: 1.45;
+}
+
+mark {
+  background: var(--mark);
+  color: inherit;
+  padding: 0 2px;
+}
+
+.year-group + .year-group {
+  margin-top: 28px;
+}
+
+.year-heading {
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  font-size: 24px;
+}
+
+.issue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 16px;
+}
+
+.issue-card {
+  overflow: hidden;
+}
+
+.issue-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #eee8dd;
+}
+
+.issue-card-body {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.issue-title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.issue-meta {
+  margin: 0;
+  font-size: 13px;
+}
+
+.reader-page {
+  background: #ece8df;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.reader-controls {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.page-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  white-space: nowrap;
+}
+
+.page-picker input {
+  width: 74px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 8px;
+  font: inherit;
+}
+
+.reader-shell {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 22px;
+  padding: 22px;
+}
+
+.reader-sidebar {
+  align-self: start;
+  max-height: calc(100vh - 130px);
+  overflow: auto;
+  padding: 18px;
+  position: sticky;
+  top: 16px;
+}
+
+.toc-list {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.toc-list a,
+.thumbnail-list a {
+  border-radius: 6px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.toc-list a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  padding: 7px 8px;
+}
+
+.toc-list a:hover,
+.toc-list a.active,
+.thumbnail-list a:hover,
+.thumbnail-list a.active {
+  background: #e6f0ec;
+}
+
+.toc-page {
+  color: var(--muted);
+}
+
+.thumbnail-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.thumbnail-list a {
+  display: grid;
+  gap: 4px;
+  padding: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.thumbnail-list img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
+.page-stage {
+  min-width: 0;
+}
+
+.page-toolbar {
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.page-toolbar button[aria-pressed="true"] {
+  background: var(--accent-dark);
+}
+
+.page-frame {
+  margin: 0;
+  text-align: center;
+}
+
+.page-frame img {
+  display: block;
+  width: min(100%, 900px);
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #c8c1b8;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.page-frame.actual img {
+  width: auto;
+  max-width: none;
+}
+
+.article-print-area {
+  display: none;
+}
+
+#page-caption {
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .site-header,
+  .reader-header,
+  .archive-layout,
+  .reader-shell {
+    display: block;
+  }
+
+  .top-actions,
+  .reader-controls {
+    margin-top: 18px;
+    justify-content: flex-start;
+  }
+
+  .search-panel {
+    position: static;
+    margin-bottom: 22px;
+  }
+
+  .reader-sidebar {
+    max-height: none;
+    position: static;
+    margin-bottom: 18px;
+  }
+}
+
+@media print {
+  @page {
+    margin: 0.25in;
+  }
+
+  body.reader-page {
+    background: #fff;
+  }
+
+  body.reader-page .reader-header,
+  body.reader-page .reader-sidebar,
+  body.reader-page .page-toolbar,
+  body.reader-page #page-caption {
+    display: none !important;
+  }
+
+  body.reader-page .reader-shell,
+  body.reader-page .page-stage,
+  body.reader-page .page-frame {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  body.reader-page .page-frame img,
+  body.reader-page .page-frame.actual img {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 10.5in !important;
+    margin: 0 auto !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  body.reader-page.article-printing .reader-shell {
+    display: none !important;
+  }
+
+  body.reader-page.article-printing .article-print-area {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.reader-page.article-printing .article-print-area img {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 10.5in !important;
+    margin: 0 auto !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    page-break-after: always;
+    page-break-inside: avoid;
+    break-after: page;
+    break-inside: avoid;
+  }
+
+  body.reader-page.article-printing .article-print-area img:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}

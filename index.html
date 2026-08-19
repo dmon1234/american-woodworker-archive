@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>American Woodworker 1985-2010</title>
+  <link rel="stylesheet" href="assets/css/american-woodworker.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">Local archive</p>
+      <h1>American Woodworker</h1>
+      <p class="subtitle">1985-2010</p>
+    </div>
+    <nav class="top-actions" aria-label="Archive actions">
+      <a class="button" href="#search">Search</a>
+      <a class="button secondary" href="#issues">Issues</a>
+    </nav>
+  </header>
+
+  <main class="archive-layout">
+    <section class="search-panel" id="search" aria-labelledby="search-heading">
+      <div class="section-heading">
+        <h2 id="search-heading">Search The Archive</h2>
+        <p id="search-summary">Search article titles and page text.</p>
+      </div>
+      <form class="search-form" id="archive-search-form" role="search">
+        <label for="archive-search-input">Search terms</label>
+        <div class="search-row">
+          <input id="archive-search-input" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Try dovetail, Chippendale, bandsaw">
+          <button type="submit">Search</button>
+        </div>
+      </form>
+      <div class="results" id="search-results" aria-live="polite"></div>
+    </section>
+
+    <section class="issue-browser" id="issues" aria-labelledby="issues-heading">
+      <div class="section-heading">
+        <h2 id="issues-heading">Issues</h2>
+        <p>Browse chronologically by year.</p>
+      </div>
+      <div id="issue-years" class="year-list"></div>
+    </section>
+  </main>
+
+  <script src="assets/js/archive-data.js"></script>
+  <script src="assets/js/search-data.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/archive.js"></script>
+</body>
+</html>

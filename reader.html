@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>American Woodworker Reader</title>
+  <link rel="stylesheet" href="assets/css/american-woodworker.css">
+</head>
+<body class="reader-page">
+  <header class="reader-header">
+    <div>
+      <a class="back-link" href="index.html">American Woodworker</a>
+      <h1 id="reader-title">Loading issue</h1>
+    </div>
+    <div class="reader-controls" aria-label="Page controls">
+      <button type="button" id="previous-page">Previous</button>
+      <label class="page-picker">
+        <span>Page</span>
+        <input id="page-number" type="number" min="1" value="1">
+        <span id="page-total">/ 1</span>
+      </label>
+      <button type="button" id="next-page">Next</button>
+      <button type="button" id="print-article" class="secondary" disabled>Print Article</button>
+    </div>
+  </header>
+
+  <main class="reader-shell">
+    <aside class="reader-sidebar" aria-labelledby="toc-heading">
+      <h2 id="toc-heading">Contents</h2>
+      <nav id="toc-list" class="toc-list"></nav>
+      <h2>Thumbnails</h2>
+      <div id="thumbnail-list" class="thumbnail-list"></div>
+    </aside>
+
+    <section class="page-stage" aria-labelledby="reader-title">
+      <div class="page-toolbar">
+        <button type="button" id="fit-width" aria-pressed="true">Fit Width</button>
+        <button type="button" id="actual-size" aria-pressed="false">Actual Size</button>
+      </div>
+      <figure class="page-frame">
+        <img id="page-image" alt="">
+        <figcaption id="page-caption"></figcaption>
+      </figure>
+    </section>
+  </main>
+  <div id="article-print-area" class="article-print-area" aria-hidden="true"></div>
+
+  <script src="assets/js/archive-data.js"></script>
+  <script src="assets/js/reader.js"></script>
+</body>
+</html>
